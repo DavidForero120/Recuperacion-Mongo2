@@ -64,7 +64,7 @@ body {
   @media (min-width: 300px) and (max-width: 480px) {
       
       img {
-          width: 83%;
+          width: 85%;
           display: flex;
           margin: 10rem 1rem -14rem;
       }
@@ -73,6 +73,7 @@ body {
           color: rgb(44, 199, 91);
           margin-top: 12rem;
           font-family: 'Merriweather', serif;
+          font-size: 1.3em;
   
       }
       .wrap {
@@ -80,17 +81,22 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 5rem;
+          margin-top: 3rem;
         }
+        .button{
+            width: 151px;
+            height: 47px;
+            font-size: 11px;
+      }
     
   }
   
   @media (min-width: 481px) and (max-width: 530px) {
     
       img {
-          width: 62%;
-          display: flex;
-          margin: 8rem auto -10rem;
+            width: 70%;
+            display: flex;
+            margin: 10rem 4em -11rem;
       }
       .titulo {
           text-align: center;
@@ -134,7 +140,7 @@ body {
       
   }
   
-  @media (min-width:728) and (max-width: 924px){
+  @media (min-width:728px) and (max-width: 924px){
   
       img {
           width: 52%;
@@ -159,7 +165,7 @@ body {
   
   }
   
-  @media (min-width: 924px)and(max-width: 1024px) {
+  @media (min-width: 925px) and  (max-width: 1024px) {
     
   
       .titulo {
@@ -169,6 +175,10 @@ body {
           font-family: 'Merriweather', serif;
   
       }
-  
-      
-  }
+      img{
+            width: 45%;
+            display: flex;
+            margin: 9rem auto -7em;
+        }
+         
+}
