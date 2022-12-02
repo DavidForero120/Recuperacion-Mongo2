@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+nav{
+    display: flex;
+    background-color: rgb(77, 134, 111);
+    box-shadow: 1px -2px 22px 3px rgb(77, 134, 111);
+}  
+
+nav img{
+    width: 5%;
+    display: flex;
+    margin: auto;
+    padding: 0.5em;
+}
+a{
+    text-decoration: none;
+    margin-left: 1rem;
+    color: rgb(253, 253, 253);
+    display: flex;
+    align-items: center;
+}
+
+a:hover{
+    color:rgb(0, 0, 0);
+}
+
