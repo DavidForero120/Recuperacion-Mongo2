@@ -5,7 +5,14 @@ nav{
     display: flex;
     background-color: rgb(77, 134, 111);
     box-shadow: 1px -2px 22px 3px rgb(77, 134, 111);
+    position: fixed;
+    width: 100%;
 }  
+hr{
+    border-top: 2px solid;
+    opacity: 0.5;
+    color: rgb(77, 134, 111);
+}
 
 nav img{
     width: 5%;
@@ -24,15 +31,20 @@ a{
 a:hover{
     color:rgb(0, 0, 0);
 }
+#h1{
+    margin-top: 5%;
+}
 .title{
     width: 100%;
     display: flex;
     justify-content: center;
+   
 }
 .container_comands{
     width: 100%;
     display: flex;
     height: 100%;
+    gap: 15px;
 }
 .comands{
     width: 50%;
@@ -41,5 +53,9 @@ a:hover{
     align-items: center;
 }
 h4,p{
-    margin: 0 !important;
+    margin: 5px !important;
+}
+input{
+    border: 1px solid  rgb(77, 134, 111);
+    border-radius: 10px;
 }
