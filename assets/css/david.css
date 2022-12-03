@@ -186,8 +186,47 @@ input , select{
 
 
 .incorrecto{
-    border: 3px solid red;
+    border: 2px solid red;
+    box-shadow: 0px 3px 15px 0px red;
+    -webkit-box-shadow: 0px 3px 15px 0px red;
+    -moz-box-shadow: 0px 3px 15px 0px red
 }
 .correcto{
-    border: 3px solid rgb(17, 134, 62);
+    border: 2px solid rgb(17, 134, 62) ;
+    box-shadow: 0px 3px 15px 0px rgba(17, 134, 62, 0.8);
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8);
+    -moz-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8);
 }
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: 4em;
+  }
+  
+  .button {
+    width: 160px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    border: 1px solid black;
+    }
+    .button:hover {
+        background-color: rgb(40, 150, 89);
+        box-shadow: 0px 15px 20px rgba(46, 229, 144, 0.4);
+        color: rgb(255, 255, 255);
+        transform: translateY(-7px);
+        border: none;
+      }
