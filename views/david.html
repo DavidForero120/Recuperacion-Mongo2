@@ -18,11 +18,15 @@
       <div class="title">
             <h1 id="h1">Comandos de mongo</h1>
       </div>
+
+      <div class="bajar">
+            <a href="#comands">Preguntas  ▼</a>
+      </div>
       <div class="container_comands">
             <div class="comands">
                   <div>
                         <div>
-                              <h4>1. use: Es un comando que se usa ára crear una base de datos.</h4>
+                              <h4>1. use: Es un comando que se usa para crear una base de datos.</h4>
                               <p>Ejemplo: use perros</p>
                         </div>
                         <hr>
@@ -76,8 +80,12 @@
                         <hr>
                   </div>
             </div>
-            <div class="comands">
-                  <div class="questions_">                      
+            <div class="comands" id="comands">
+                  <div class="pr">
+                        <h3>¡Preguntas!</h3>
+                  </div>
+                  <hr>
+                  <div class="questions_" id="questions_">                      
                         <div class="inputs">
                               <h4>1). ¿Cuál es el comando para crear la base de datos "estudiantes"?</h4>
                               <select name="" class="form-select" id="use_">
@@ -97,7 +105,7 @@
                         </div>
                         <hr>
                         <div class="inputs">
-                              <h4>3). Deseo crear una colección llamada "alumnos" dentro de la base de datos "cursoB", seleccione una opcion</h4>
+                              <h4>3). Deseo crear una colección llamada "alumnos" dentro de la base de datos "cursoB", ¿Cuál es la opción correcta?</h4>
                               <select class="form-select" id="create_">
                                     <option value="1">db.insert("alumnos")</option>
                                     <option value="2">db.createCollection("alumnos")</option>
@@ -113,6 +121,21 @@
                         <div class="inputs">
                               <h4>5). Se desea actualizar el "nombre" del "_id" 1 por "lucas" de la colección "profesores", ayudanos:</h4>
                               <input type="text" id="">
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>6). Se desea eliminar la colección "animales", selecciona la opción correcta:</h4>
+                              <select id="">
+                                    <option value="1">animales.drop()</option>
+                                    <option value="2">db.animal.drop()</option>
+                                    <option value="3">db.animales.delete()</option>
+                                    <option value="4">db.animales.drop()</option>
+                              </select>
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>7). Se necesita eliminar la base de datos "araña", se esta usando araña, ¿cómo lo haria?:</h4>
+                              <input type="text">
                         </div>
                   </div>
             </div>

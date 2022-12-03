@@ -8,18 +8,19 @@ nav{
     position: fixed;
     width: 100%;
 }  
+
 hr{
     border-top: 2px solid;
     opacity: 0.5;
     color: rgb(77, 134, 111);
 }
-
-nav img{
-    width: 5%;
+.title{
+    width: 100%;
     display: flex;
-    margin: auto;
-    padding: 0.5em;
+    justify-content: center;
+   
 }
+
 a{
     text-decoration: none;
     margin-left: 1rem;
@@ -31,31 +32,141 @@ a{
 a:hover{
     color:rgb(0, 0, 0);
 }
-#h1{
-    margin-top: 5%;
-}
-.title{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   
-}
-.container_comands{
-    width: 100%;
-    display: flex;
-    height: 100%;
-    gap: 15px;
-}
-.comands{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
+
 h4,p{
     margin: 5px !important;
 }
-input{
+input , select{
     border: 1px solid  rgb(77, 134, 111);
     border-radius: 10px;
+}
+
+
+@media screen and (min-width: 300px) {
+    nav img{
+        width: 20%;
+        padding: 0;
+        margin: auto;
+    }
+    #h1{
+        margin-top: 20%;
+        font-size: 1.3em;
+    }
+    .container_comands{
+        display: flex;
+        flex-direction: column;
+    }
+    .comands{
+        width: 100%;
+    }
+    .bajar{
+        display: flex;
+        
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .bajar a{
+        color: rgb(17, 134, 62);
+        margin-right: 5px;
+    }
+    h4{
+        font-size: 1em !important;
+    }
+    p{
+        font-size: 0.85em !important;
+        font-weight: 500;
+    }
+    select{
+        margin-top: 15px;
+    }
+    .questions_{
+        margin-left: 8px;
+        margin-right: 8px;
+    } 
+    input{
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+    .comands div div{
+        margin-left: 8px;
+        margin-right: 8px;
+    }.pr{
+        display: flex;
+        margin-right: 8px;
+    }
+}
+@media screen and (min-width: 501px){
+    nav img {
+        width: 15%;
+        padding: 7px;
+    }
+    #h1{
+         font-size: 1.5em;
+    }
+    input, select{
+        width: 15em;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1023px){
+    nav img {
+        width: 12%;
+        padding: 5px;
+    }#h1 {
+        margin-top: 12%;
+    }h4 {
+        font-size: 1.2em !important;
+    }p {
+        font-size: 1em !important;
+        font-weight: 400;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+    .questions_ {
+        margin-left: 20px;
+        width: 100%;
+        margin-right: 20px;
+    }.comands div div{
+        margin-left: 20px;
+        margin-right: 20px;
+    }#h1 {
+        margin-top: 10%;
+    }nav img {
+        width: 9%;
+    }.pr{
+        margin-left: 25px;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .bajar{
+        display: none;
+    }nav img{
+        width: 8%;
+        display: flex;
+        margin: auto;
+        padding: 0.5em;
+    }
+    .container_comands{
+        width: 100%;
+        display: flex;
+        height: 100%;
+        gap: 15px;
+        flex-direction: row;
+    }
+    .comands{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }.pr{
+        display: none;
+    }#h1{
+        margin-top: 5%;
+        font-size: 2em;
+    }h4,p{
+        font-size: 1.3em !important;
+    }p{
+        font-weight: 300;
+    }
 }
