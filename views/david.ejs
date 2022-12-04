@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <title>Introduccion</title>
+      <link rel="icon" type="imgage/png" href="img/icon.png">
+      <link rel="stylesheet" href="css/david.css">
+</head>
+<body>
+      <nav>
+            <a href="/">Volver</a>
+            <img src="img/logo.png" alt="">
+      </nav>
+      <div class="title">
+            <h1 id="h1">Comandos de mongo</h1>
+      </div>
+
+      <div class="bajar">
+            <a href="#comands">Preguntas  ▼</a>
+      </div>
+      <div class="container_comands">
+            <div class="comands">
+                  <div>
+                        <div>
+                              <h4>1. use: Es un comando que se usa para crear una base de datos.</h4>
+                              <p>Ejemplo: use perros</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>2. db: Este comando se usa para ver que base de datos se esta usando.</h4>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>3. show dbs: Muestra las bases de datos existentes.</h4>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>4. createCollection: Sirve para agregar una colección nueva. </h4>
+                              <p>Ejemplo: db.createCollection("nombreColeccion")</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>5. show collections: Muestra todas las colleciones dentro de la base de datos que se esta usando.</h4>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>6. insert: El comando permite agregar informacion dentro de un documento.</h4>
+                              <p>Ejemplo: db.perros.insert({nombre: "Lucas", edad: 10})</p>
+                              <p>Ejemplo-insertar varios documentos: db.perros.insert([{nombre: "Lucas", edad: 10},{nombre:"tonny", edad: 3}])</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>7. find: Trae todos los documentos y si tiene parametro devuelve los que coincidan con el valor</h4>
+                              <p>db.perros.find({nombre: "tonny"}) o db.perros.find()</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>8. update: Sirve para modificar datos de un documento, recive dos parametros uno que busca el documento y el otro el valor a modificar.</h4>
+                              <p>db.perros.update({name:"Lucas"}, {$set: {edad: 5}})</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>9. updateMany: modifica varios los valores de varios documentos</h4>
+                              <p>db.perros.updateMany({}, {$set: {edad: 5}})</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>10. drop: Este comando sirve para eliminar una colección.</h4>
+                              <p>db.perros.drop()</p>
+                        </div>
+                        <hr>
+                        <div>
+                              <h4>11. dropDatabase: Sirve para eliminar la base de datos que esta seleccionada.</h4>
+                              <p>db.dropDatabase()</p>
+                        </div>
+                        <hr>
+                  </div>
+            </div>
+            <div class="comands" id="comands">
+                  <div class="pr">
+                        <h3>¡Preguntas!</h3>
+                  </div>
+                  <hr>
+                  <div class="questions_" id="questions_">                      
+                        <div class="inputs">
+                              <h4>1). ¿Cuál es el comando para crear la base de datos "estudiantes"?</h4>
+                              <select class="form-select" id="use_">
+                                    <option value="0">Create estudiantes</option>
+                                    <option value="0">use Estudiantes</option>
+                                    <option value="1">use estudiantes</option>
+                                    <option value="0">Use ESTUDIANTES</option>
+                              </select>
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>2). Si estoy usando la base de datos gatos y deseo eliminar la de perros, ¿qué haria?:</h4>
+                              <p>Paso 1:</p>
+                              <input type="text" id="drop_1">
+                              <p>Paso 2:</p>
+                              <input type="text" id="drop_2">
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>3). Deseo crear una colección llamada "alumnos" dentro de la base de datos "cursoB", ¿Cuál es la opción correcta?</h4>
+                              <select class="form-select" id="create_">
+                                    <option value="0">db.insert("alumnos")</option>
+                                    <option value="1">db.createCollection("alumnos")</option>
+                                    <option value="0" class="form-check-label">db.createCollection("alumno")</option>
+                              </select>
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>4). Insetar un documento en la colección "alumnos" con el "nombre" "pedro":</h4>
+                              <input type="text" id="insert_">
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>5). Se desea actualizar el "nombre" del "_id" 1 por "lucas" de la colección "profesores", ayudanos:</h4>
+                              <input type="text" id="update_">
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>6). Se desea eliminar la colección "animales", seleccione la opción correcta:</h4>
+                              <select id="drop_3">
+                                    <option value="1">animales.drop()</option>
+                                    <option value="2">db.animal.drop()</option>
+                                    <option value="3">db.animales.delete()</option>
+                                    <option value="4">db.animales.drop()</option>
+                              </select>
+                        </div>
+                        <hr>
+                        <div class="inputs">
+                              <h4>7). Se necesita eliminar la base de datos "araña", se esta usando la base de datos araña, ¿cómo lo haria?:</h4>
+                              <input type="text" id="drop_4">
+                        </div>
+                        <div>
+                              <div id="seguir" class="wrap" style="display: none;">
+                                    <div class="botones">
+                                     <a href="./views/david.html"><button class="button">Comenzar</button></a>        
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <script src="js/david.js"></script>
+</body>
+</html>

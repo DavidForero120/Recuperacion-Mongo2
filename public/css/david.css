@@ -1,0 +1,252 @@
+body{
+      margin: 0;
+      background-color: rgba(173, 205, 171, 0.833);    
+  }
+  nav{
+      display: flex;
+      background-color: rgb(77, 134, 111);
+      box-shadow: 1px -2px 22px 3px rgb(77, 134, 111);
+      position: fixed;
+      width: 100%;
+  }  
+  
+  hr{
+      border-top: 2px solid;
+      opacity: 1;
+      color: rgb(255, 255, 255);
+  }
+  option:hover{
+      background-color: green !important;
+  }
+  .title{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+     
+  }
+  
+  a{
+      text-decoration: none;
+      margin-left: 1rem;
+      color: rgb(253, 253, 253);
+      display: flex;
+      align-items: center;
+  }
+  
+  a:hover{
+      color:rgb(0, 0, 0);
+  }
+  
+  
+  h4,p{
+      margin: 5px !important;
+  }
+  input , select{
+      border: 1px solid  rgb(255, 255, 255) !important;
+      border-radius: 10px !important;
+      background-color: rgba(155, 198, 114, 0.737) !important;    
+      box-shadow: 0px 5px 0px green !important;
+  }
+  
+  
+  @media screen and (min-width: 300px) {
+      nav img{
+          width: 20%;
+          padding: 0;
+          margin: auto;
+      }
+      #h1{
+          margin-top: 20%;
+          font-size: 1.3em;
+      }
+      .container_comands{
+          display: flex;
+          flex-direction: column;
+
+      }
+      .comands{
+          width: 100%;
+      }
+      .bajar{
+          display: flex;
+          
+          width: 100%;
+          justify-content: flex-end;
+      }
+      .bajar a{
+          color: rgb(17, 134, 62);
+          margin-right: 5px;
+      }
+      h4{
+          font-size: 1em !important;
+      }
+      p{
+          font-size: 0.85em !important;
+          font-weight: 500;
+      }
+      select{
+          margin-top: 15px;
+      }
+      .questions_{
+          margin-left: 8px;
+          margin-right: 8px;
+      } 
+      input{
+          margin-top: 8px;
+          margin-bottom: 10px;
+      }
+      .comands div div{
+          margin-left: 8px;
+          margin-right: 8px;
+      }.pr{
+          display: flex;
+          margin-right: 8px;
+      }.continuar{
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 2%;
+          margin-bottom: 2%;
+      }.continuar button{
+          background-color: rgb(17, 134, 62);
+          border-radius: 15px;
+          border: 1px solid white;
+          padding: 0.3em;
+          font-size: 0.9em;
+      }
+  }
+  @media screen and (min-width: 501px){
+      nav img {
+          width: 15%;
+          padding: 7px;
+      }
+      #h1{
+           font-size: 1.5em;
+      }
+      input, select{
+          width: 15em;
+      }
+  }
+  @media screen and (min-width: 800px) and (max-width: 1023px){
+      nav img {
+          width: 12%;
+          padding: 5px;
+      }#h1 {
+          margin-top: 12%;
+      }h4 {
+          font-size: 1.2em !important;
+      }p {
+          font-size: 1em !important;
+          font-weight: 400;
+      }
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1399px) {
+      .questions_ {
+          margin-left: 20px;
+          width: 100%;
+          margin-right: 20px;
+      }.comands div div{
+          margin-left: 20px;
+          margin-right: 20px;
+      }#h1 {
+          margin-top: 10%;
+      }nav img {
+          width: 9%;
+      }.pr{
+          margin-left: 25px;
+          margin-right: 20px;
+      }
+  }
+  @media screen and (min-width: 1400px) {
+      .bajar a{
+          margin-right: 85px !important;
+          font-size: 1.5em;
+          position: fixed;
+      }nav img{
+          width: 8%;
+          display: flex;
+          margin: auto;
+          padding: 0.5em;
+      }
+      .container_comands{
+          width: 100%;
+          display: flex;
+          height: 100%;
+          gap: 15px;
+
+         
+      }.questions_ {
+            width: 80%;
+      }
+      .comands{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }.pr{
+          display: none;
+      }#h1{
+          margin-top: 6%;
+          margin-bottom: 2%;
+          font-size: 2em;
+      }h4,p{
+          font-size: 1.3em !important;
+      }p{
+          font-weight: 300;
+      }.inputs{ 
+            margin-bottom: 2%;
+      }
+      .comands div div {
+            margin-bottom: 3%;
+        }
+        select, input{
+            height: 2.5em !important;
+            width: 18em !important;
+        }
+  }
+  
+  
+  .incorrecto{
+      border: 2px solid red !important;
+      box-shadow: 0px 3px 15px 0px red !important;
+      -webkit-box-shadow: 0px 3px 15px 0px red !important;
+      -moz-box-shadow: 0px 3px 15px 0px red !important;
+  }
+  .correcto{
+      border: 2px solid rgb(17, 134, 62) !important;
+      box-shadow: 0px 3px 15px 0px rgba(17, 134, 62, 0.8) !important;
+      -webkit-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
+      -moz-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
+  }
+  .wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 2em;
+      margin-right: 2em;
+      margin-bottom: 4em;
+    }
+    
+    .button {
+      width: 160px;
+      height: 45px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 45px;
+      box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      border: 1px solid black;
+      }
+      .button:hover {
+          background-color: rgb(40, 150, 89);
+          box-shadow: 0px 15px 20px rgba(46, 229, 144, 0.4);
+          color: rgb(255, 255, 255);
+          transform: translateY(-7px);
+          border: none;
+        }
