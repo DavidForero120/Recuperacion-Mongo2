@@ -49,18 +49,18 @@ question3.addEventListener('mouseleave',()=>{
     }
 })
 
-const question4 = document.getElementById('ques_4');
+const question4 = document.getElementById('create_');
 question4.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('ques_4').value
+    const valor = document.getElementById('create_').value
     if(valor == 1){
         question4.classList.remove('incorrecto');
         question4.classList.add('correcto');
-        validar['pregunta4'] = true
+        validar['pregunta3'] = true
         console.log(validar)
     }else{
         question4.classList.remove('correcto');
         question4.classList.add('incorrecto');
-        validar['pregunta4'] = false
+        validar['pregunta3'] = false
     }
 })
 
@@ -70,11 +70,11 @@ question5.addEventListener('mouseleave',()=>{
     if(valor== `db.alumnos.insert({nombre:"pedro"})` || valor == `db.alumnos.insert({ nombre: "pedro" })` || valor == `db.alumnos.insert( { nombre: "pedro" } )`){
         question5.classList.remove('incorrecto');
         question5.classList.add('correcto');
-        validar['pregunta'] = true;
+        validar['pregunta4'] = true;
     }else{
         question5.classList.remove('correcto');
         question5.classList.add('incorrecto');
-        validar['pregunta'] = false;
+        validar['pregunta4'] = false;
     }
 })
 
@@ -126,7 +126,7 @@ question8.addEventListener('mouseleave',()=> {
 
 question1.addEventListener('blur',()=>{
     const valor = document.getElementById('ques_1').value
-    if(valor==2){
+    if(valor==1){
         question1.classList.remove('incorrecto');
         question1.classList.add('correcto');
         validar['pregunta1'] = true;
@@ -167,7 +167,7 @@ question3.addEventListener('blur',()=>{
 
 
 question4.addEventListener('blur',()=>{
-    const valor = document.getElementById('ques_4').value
+    const valor = document.getElementById('create_').value
     if(valor == 1){
         question4.classList.remove('incorrecto');
         question4.classList.add('correcto');
