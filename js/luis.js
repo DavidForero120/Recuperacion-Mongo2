@@ -10,7 +10,7 @@ const validar = [
 const question1 = document.getElementById('ques_1');
 question1.addEventListener('mouseleave',()=>{
     const valor = document.getElementById('ques_1').value;
-    if(valor == 2){
+    if(valor ==2){
         question1.classList.remove('incorrecto');
         question1.classList.add('correcto');
         validar['pregunta1'] = true
@@ -21,11 +21,10 @@ question1.addEventListener('mouseleave',()=>{
     }
 })
 
-
-const question2 = document.getElementById('drop_1');
+const question2 = document.getElementById('ques_2');
 question2.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('drop_1').value;
-    if(valor == "use perros"){
+    const valor = document.getElementById('ques_2').value;
+    if(valor == "db.estudiantes.find({nombre:{$nin:['Pedro']}})"){
         question2.classList.remove('incorrecto');
         question2.classList.add('correcto');
         validar['pregunta2'] = true
@@ -140,8 +139,8 @@ question1.addEventListener('blur',()=>{
 
 
 question2.addEventListener('blur',()=>{
-    const valor = document.getElementById('drop_1').value;
-    if(valor == "use perros"){
+    const valor = document.getElementById('ques_2').value;
+    if(valor == "db.estudiantes.find({nombre:{$nin:['Pedro']}})"){
         question2.classList.remove('incorrecto');
         question2.classList.add('correcto');
         validar['pregunta2'] = true

@@ -32,14 +32,11 @@
                 <p>2. $nin: El operador selecciona los documentos cuyo
                     campo contiene <br> una matriz sin elementos iguales
                     a un valor en la matriz especificada.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="ques_2">
-                    <option value="0">Seleccione la opcion que crea correcta</option>
-                    <option value="1">op1</option>
-                    <option value="2">op1</option>
-                    <option value="3">op1</option>
-                </select>
+                <p>Ejemplo: db.libros.find( { editorial: { $nin : ['Planeta'] } })</p>
+                <p>Digite la sintaxis correcta que no contenga el nombre 'Pedro', <br>
+                 de la colección estudiantes.
+                </p>
+                <input type="text" id="ques_2">
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
