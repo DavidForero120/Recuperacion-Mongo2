@@ -67,7 +67,7 @@ question4.addEventListener('mouseleave',()=>{
 const question5 = document.getElementById('ques_5');
 question5.addEventListener('mouseleave',()=>{
     const valor = document.getElementById('ques_5').value;
-    if(valor== "db.producto.find({precio: {$not: {$gt: 2000}}})"){
+    if(valor== "db.producto.find({precio:{$not:{$gt:2000}}})"){
         question5.classList.remove('incorrecto');
         question5.classList.add('correcto');
         validar['pregunta5'] = true;
@@ -151,7 +151,7 @@ question4.addEventListener('blur',()=>{
 
 question5.addEventListener('blur',()=>{
     const valor = document.getElementById('ques_5').value;
-    if(valor== "db.producto.find({precio: {$not: {$gt: 2000}}})"){
+    if(valor== "db.producto.find({precio:{$not:{$gt:2000}}})"){
         question5.classList.remove('incorrecto');
         question5.classList.add('correcto');
         validar['pregunta5'] = true;
@@ -176,37 +176,6 @@ question6.addEventListener('blur',()=>{
     }
 })
  
-
-question7.addEventListener('blur',()=> {
-    const valor = document.getElementById('drop_3').value;
-    if(valor == 4){
-        question7.classList.remove('incorrecto');
-        question7.classList.add('correcto');
-        validar['pregunta6'] = true; 
-    }else{
-        question7.classList.remove('correcto');
-        question7.classList.add('incorrecto');
-        validar['pregunta6'] = false; 
-    }
-
-});
-
-
-question8.addEventListener('blur',()=> {
-    const valor = document.getElementById('drop_4').value;
-    if(valor == "db.dropDatabase()"){
-        question8.classList.remove('incorrecto');
-        question8.classList.add('correcto');
-        validar['pregunta7'] = true; 
-        console.log(validar)
-    }else{
-        question8.classList.remove('correcto');
-        question8.classList.add('incorrecto');
-        validar['pregunta7'] = false; 
-    }
-
-});
-
 if(validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
     const seguir = document.getElementById('seguir');
     seguir.style.display="flex"
