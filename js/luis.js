@@ -81,14 +81,14 @@ question5.addEventListener('mouseleave',()=>{
 const question6 = document.getElementById('ques_6');
 question6.addEventListener('mouseleave',()=>{
     const valor = document.getElementById('ques_6').value;
-    if(valor== `db.profesores.update({_id:1},{$set:{nombre:"lucas"}})` || valor== `db.profesores.update( {_id:1} , {$set:{nombre:"lucas"} } )`|| valor== `db.profesores.update( {_id:1} , { $set:{nombre:"lucas"} } )` || valor== `db.profesores.update({ _id:1 },{ $set:{ nombre:"lucas" }})`){
+    if(valor== 2){
         question6.classList.remove('incorrecto');
         question6.classList.add('correcto');
-        validar['pregunta5'] = true; 
+        validar['pregunta6'] = true; 
     }else{
         question6.classList.remove('correcto');
         question6.classList.add('incorrecto');
-        validar['pregunta5'] = false; 
+        validar['pregunta6'] = false; 
     }
 })
 
@@ -139,12 +139,12 @@ question4.addEventListener('blur',()=>{
     if(valor == 1){
         question4.classList.remove('incorrecto');
         question4.classList.add('correcto');
-        validar['pregunta3'] = true
+        validar['pregunta4'] = true
         console.log(validar)
     }else{
         question4.classList.remove('correcto');
         question4.classList.add('incorrecto');
-        validar['pregunta3'] = false
+        validar['pregunta4'] = false
     }
 })
 
@@ -164,15 +164,15 @@ question5.addEventListener('blur',()=>{
 
 
 question6.addEventListener('blur',()=>{
-    const valor = document.getElementById('update_').value;
-    if(valor== `db.profesores.update({_id:1},{$set:{nombre:"lucas"}})` || valor== `db.profesores.update( {_id:1} , {$set:{nombre:"lucas"} } )`|| valor== `db.profesores.update( {_id:1} , { $set:{nombre:"lucas"} } )` || valor== `db.profesores.update({ _id:1 },{ $set:{ nombre:"lucas" }})`){
+    const valor = document.getElementById('ques_6').value;
+    if(valor== 2){
         question6.classList.remove('incorrecto');
         question6.classList.add('correcto');
-        validar['pregunta5'] = true; 
+        validar['pregunta6'] = true; 
     }else{
         question6.classList.remove('correcto');
         question6.classList.add('incorrecto');
-        validar['pregunta5'] = false; 
+        validar['pregunta6'] = false; 
     }
 })
  

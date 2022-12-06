@@ -75,24 +75,22 @@
                     ◃expresión-operador▹ especificada <br> y selecciona
                     los documentos que no coinciden con la
                     ◃expresión-operador▹.</p>
-                <p>Ejemplo: { field: { $not: { operator-expression } } } (operador gt "mayor que")</p>
+                <p>Ejemplo: { field: { $not: { operator-expression } } } (operador $gt "mayor que")</p>
                 <p>Digite la sintaxis correcta para la colección producto <br>
                 que el precio no sea mayor a 2000</p>
                 <input type="text" id="ques_5">
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
-                <p>6. $nor: Consulta con Dos Expresiones · contener el
-                    campo precio cuyo valor <br> no es igual a 1.99 y
-                    contener el campo venta cuyo valor no es igual a
-                    verdadero.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
+                <p>6. $nor: en una matriz utilizando una o varias expresiones. <br> 
+                    Selecciona los documentos que no cumplen las expresiones de la consulta.</p>
+                <p>Ejemplo: { $nor: [ { valor1 }, { valor2 }, { valor3 } ] }</p>
+                <p>Seleccione la sintaxis correcta</p>
                 <select name="opciones" id="ques_6">
                     <option value="0">Seleccione la opcion que crea correcta</option>
-                    <option value="1">op1</option>
-                    <option value="2">op1</option>
-                    <option value="3">op1</option>
+                    <option value="1">( { $nor: [ { precio: 2000 }, $nor: { cantidad: 8 } ]  } )</option>
+                    <option value="2">( { $nor: [ { precio: 2000 }, { cantidad: 8 } ]  } )</option>
+                    <option value="3">( $or:{ $nor: [ { precio: 2000 }, { cantidad: 8 } ]  } )</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
