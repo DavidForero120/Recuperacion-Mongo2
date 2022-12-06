@@ -35,46 +35,46 @@ question2.addEventListener('mouseleave',()=>{
     }
 })
 
-const question3 = document.getElementById('drop_2');
+const question3 = document.getElementById('ques_3');
 question3.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('drop_2').value;
-    if(valor == "db.dropDatabase()"){
+    const valor = document.getElementById('ques_3').value;
+    if(valor == 3){
         question3.classList.remove('incorrecto');
         question3.classList.add('correcto');
-        validar['pregunta2a'] = true
+        validar['pregunta3'] = true
     }else{
         question3.classList.remove('correcto');
         question3.classList.add('incorrecto');
-        validar['pregunta2a'] = false
-    }
-})
-
-const question4 = document.getElementById('create_');
-question4.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('create_').value
-    if(valor == 1){
-        question4.classList.remove('incorrecto');
-        question4.classList.add('correcto');
-        validar['pregunta3'] = true
-        console.log(validar)
-    }else{
-        question4.classList.remove('correcto');
-        question4.classList.add('incorrecto');
         validar['pregunta3'] = false
     }
 })
 
-const question5 = document.getElementById('insert_');
+const question4 = document.getElementById('ques_4');
+question4.addEventListener('mouseleave',()=>{
+    const valor = document.getElementById('ques_4').value
+    if(valor == 1){
+        question4.classList.remove('incorrecto');
+        question4.classList.add('correcto');
+        validar['pregunta4'] = true
+        console.log(validar)
+    }else{
+        question4.classList.remove('correcto');
+        question4.classList.add('incorrecto');
+        validar['pregunta4'] = false
+    }
+})
+
+const question5 = document.getElementById('ques_5');
 question5.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('insert_').value;
-    if(valor== `db.alumnos.insert({nombre:"pedro"})` || valor == `db.alumnos.insert({ nombre: "pedro" })` || valor == `db.alumnos.insert( { nombre: "pedro" } )`){
+    const valor = document.getElementById('ques_5').value;
+    if(valor== "db.producto.find({precio: {$not: {$gt: 2000}}})"){
         question5.classList.remove('incorrecto');
         question5.classList.add('correcto');
-        validar['pregunta4'] = true;
+        validar['pregunta5'] = true;
     }else{
         question5.classList.remove('correcto');
         question5.classList.add('incorrecto');
-        validar['pregunta4'] = false;
+        validar['pregunta5'] = false;
     }
 })
 
@@ -91,42 +91,10 @@ question6.addEventListener('mouseleave',()=>{
         validar['pregunta5'] = false; 
     }
 })
- 
-const question7 = document.getElementById('drop_3');
-question7.addEventListener('mouseleave',()=> {
-    const valor = document.getElementById('drop_3').value;
-    if(valor == 4){
-        question7.classList.remove('incorrecto');
-        question7.classList.add('correcto');
-        validar['pregunta6'] = true; 
-    }else{
-        question7.classList.remove('correcto');
-        question7.classList.add('incorrecto');
-        validar['pregunta6'] = false; 
-    }
-
-});
-
-const question8 = document.getElementById('drop_4');
-question8.addEventListener('mouseleave',()=> {
-    const valor = document.getElementById('drop_4').value;
-    if(valor == "db.dropDatabase()"){
-        question8.classList.remove('incorrecto');
-        question8.classList.add('correcto');
-        validar['pregunta7'] = true; 
-        console.log(validar)
-    }else{
-        question8.classList.remove('correcto');
-        question8.classList.add('incorrecto');
-        validar['pregunta7'] = false; 
-    }
-
-});
-
 
 question1.addEventListener('blur',()=>{
     const valor = document.getElementById('ques_1').value
-    if(valor==1){
+    if(valor==2){
         question1.classList.remove('incorrecto');
         question1.classList.add('correcto');
         validar['pregunta1'] = true;
@@ -153,21 +121,21 @@ question2.addEventListener('blur',()=>{
 
 
 question3.addEventListener('blur',()=>{
-    const valor = document.getElementById('drop_2').value;
-    if(valor == "db.dropDatabase()"){
+    const valor = document.getElementById('ques_3').value;
+    if(valor == 3){
         question3.classList.remove('incorrecto');
         question3.classList.add('correcto');
-        validar['pregunta2a'] = true
+        validar['pregunta3'] = true
     }else{
         question3.classList.remove('correcto');
         question3.classList.add('incorrecto');
-        validar['pregunta2a'] = false
+        validar['pregunta3'] = false
     }
 })
 
 
 question4.addEventListener('blur',()=>{
-    const valor = document.getElementById('create_').value
+    const valor = document.getElementById('ques_4').value
     if(valor == 1){
         question4.classList.remove('incorrecto');
         question4.classList.add('correcto');
@@ -182,15 +150,15 @@ question4.addEventListener('blur',()=>{
 
 
 question5.addEventListener('blur',()=>{
-    const valor = document.getElementById('insert_').value;
-    if(valor== `db.alumnos.insert({nombre:"pedro"})` || valor == `db.alumnos.insert({ nombre: "pedro" })` || valor == `db.alumnos.insert( { nombre: "pedro" } )`){
+    const valor = document.getElementById('ques_5').value;
+    if(valor== "db.producto.find({precio: {$not: {$gt: 2000}}})"){
         question5.classList.remove('incorrecto');
         question5.classList.add('correcto');
-        validar['pregunta4'] = true;
+        validar['pregunta5'] = true;
     }else{
         question5.classList.remove('correcto');
         question5.classList.add('incorrecto');
-        validar['pregunta4'] = false;
+        validar['pregunta5'] = false;
     }
 })
 
