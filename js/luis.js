@@ -1,25 +1,23 @@
 const validar = [
     pregunta1 = false,
     pregunta2 = false,
-    pregunta2a = false,
     pregunta3 = false,
     pregunta4 = false,
     pregunta5 = false,
-    pregunta6 = false,
-    pregunta7 = false
+    pregunta6 = false
 ]
 
-const question1 = document.getElementById('use_');
+const question1 = document.getElementById('ques_1');
 question1.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('use_').value
-    if(valor==1){
+    const valor = document.getElementById('ques_1').value;
+    if(valor == 2){
         question1.classList.remove('incorrecto');
         question1.classList.add('correcto');
-        validar['pregunta1'] = true;
+        validar['pregunta1'] = true
     }else{
         question1.classList.remove('correcto');
         question1.classList.add('incorrecto');
-        validar['pregunta1'] = false;
+        validar['pregunta1'] = false
     }
 })
 
@@ -128,7 +126,7 @@ question8.addEventListener('mouseleave',()=> {
 
 
 question1.addEventListener('blur',()=>{
-    const valor = document.getElementById('use_').value
+    const valor = document.getElementById('ques_1').value
     if(valor==1){
         question1.classList.remove('incorrecto');
         question1.classList.add('correcto');

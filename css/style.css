@@ -56,3 +56,16 @@ select, input{
     font-size: 15px;
     background-color: rgb(154, 198, 114);
 }
+
+.incorrecto{
+    border: 2px solid red !important;
+    box-shadow: 0px 3px 15px 0px red !important;
+    -webkit-box-shadow: 0px 3px 15px 0px red !important;
+    -moz-box-shadow: 0px 3px 15px 0px red !important;
+}
+.correcto{
+    border: 2px solid rgb(17, 134, 62) !important;
+    box-shadow: 0px 3px 15px 0px rgba(17, 134, 62, 0.8) !important;
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
+    -moz-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
+}

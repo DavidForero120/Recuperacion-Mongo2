@@ -11,17 +11,21 @@
 
 <body>
     <div class="titulo">
-            <h1>Comandos de mongo</h1>
-        </div>
-    <div class="contenedor">    
+        <h1>Comandos de mongo</h1>
+    </div>
+    <div class="contenedor">
         <div class="contenido">
             <div>
-                <p>1. $in: El operador selecciona los documentos donde el <br>
-                    valor de un campo es igual a cualquier valor en la
-                    matriz especificada.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <input type="text" id="ques_1">
+                <p>1. $in: El operador selecciona los documentos donde el valor de un campo <br> 
+                    es igual a cualquier valor en la matriz especificada.</p>
+                <p>Ejemplo: db.coleccion.find({campo:{$in:['valor1','valor2',...,'valorN']}});</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_1">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({campo:$in:{['valor1','valor2','valor3']}})</option>
+                    <option value="2">({campo:{$in:['valor1','valor2','valor3']}})</option>
+                    <option value="3">({$in: [{'valor1'}, {'valor2'} ]})</option>
+                </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
@@ -54,8 +58,8 @@
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
-            </div>
-            <div class="contenido">
+        </div>
+        <div class="contenido">
             <div>
                 <p>4. $and: Evalúa una o más expresiones y devuelve
                     verdadero si todas las expresiones <br> son
@@ -67,7 +71,7 @@
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
-                <p>5. $not: Realiza una operación NOT lógica en la 
+                <p>5. $not: Realiza una operación NOT lógica en la
                     ◃expresión-operador▹ especificada <br> y selecciona
                     los documentos que no coinciden con la
                     ◃expresión-operador▹.</p>
