@@ -78,9 +78,9 @@ question5.addEventListener('mouseleave',()=>{
     }
 })
 
-const question6 = document.getElementById('update_');
+const question6 = document.getElementById('ques_6');
 question6.addEventListener('mouseleave',()=>{
-    const valor = document.getElementById('update_').value;
+    const valor = document.getElementById('ques_6').value;
     if(valor== `db.profesores.update({_id:1},{$set:{nombre:"lucas"}})` || valor== `db.profesores.update( {_id:1} , {$set:{nombre:"lucas"} } )`|| valor== `db.profesores.update( {_id:1} , { $set:{nombre:"lucas"} } )` || valor== `db.profesores.update({ _id:1 },{ $set:{ nombre:"lucas" }})`){
         question6.classList.remove('incorrecto');
         question6.classList.add('correcto');

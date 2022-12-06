@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mongo</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Comandos de mongo</h1>
+    </div>
+    <div class="contenedor">
+        <div class="contenido">
+            <div>
+                <p>1. $in: El operador selecciona los documentos donde el valor de un campo <br> 
+                    es igual a cualquier valor en la matriz especificada.</p>
+                <p>Ejemplo: db.coleccion.find({campo:{$in:['valor1','valor2',...,'valorN']}});</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_1">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({campo:$in:{['valor1','valor2','valor3']}})</option>
+                    <option value="2">({campo:{$in:['valor1','valor2','valor3']}})</option>
+                    <option value="3">({$in: [{'valor1'}, {'valor2'} ]})</option>
+                </select>
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+            <div>
+                <p>2. $nin: El operador selecciona los documentos cuyo
+                    campo contiene <br> una matriz sin elementos iguales
+                    a un valor en la matriz especificada.</p>
+                <p>Ejemplo: db.libros.find( { editorial: { $nin : ['Planeta'] } })</p>
+                <p>Digite la sintaxis correcta que no contenga el nombre 'Pedro', <br>
+                 de la colección estudiantes.
+                </p>
+                <input type="text" id="ques_2">
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+            <div>
+                <p>3. $or: Este operador se utiliza para realizar operaciones
+                    OR lógicas en la matriz <br> de dos o más expresiones
+                    y seleccionar o recuperar solo aquellos
+                    documentos <br> que coincidan con al menos una de
+                    las expresiones dadas en la matriz.</p>
+                <p>Ejemplo: ({ $or: [ { valor1 }, { valor2 }, { valor3 } ] })</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_3">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({campo:{$or:['precio:50','cantidad:1']}})</option>
+                    <option value="2">({$or: [{precio:50}},$or:{cantidad:1} ]})</option>
+                    <option value="3">({$or: [{precio:50}}, {cantidad:1} ]})</option>
+                </select>
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+        </div>
+        <div class="contenido">
+            <div>
+                <p>4. $and: Es una matriz de dos o más expresiones. Selecciona los documentos <br> 
+                    en los que se cumplen todas las condiciones de las expresiones.</p>
+                <p>Ejemplo: ({ $and: [ { valor1 }, { valor2 }, { valor3 } ] })</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_4">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({$and: [{pais:colombia}}, {ciudad:cartagena} ]})</option>
+                    <option value="2">({$and: [{pais:colombia},$and:{ciudad:cartagena} ]})</option>
+                    <option value="3">({campo:{$and:['pais:colombia','ciudad:cartagena']}})</option>
+                </select>
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+            <div>
+                <p>5. $not: Realiza una operación NOT lógica en la
+                    ◃expresión-operador▹ especificada <br> y selecciona
+                    los documentos que no coinciden con la
+                    ◃expresión-operador▹.</p>
+                <p>Ejemplo: { field: { $not: { operator-expression } } } (operador gt "mayor que")</p>
+                <p>Digite la sintaxis correcta para la colección producto <br>
+                que el precio no sea mayor a 2000</p>
+                <input type="text" id="ques_5">
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+            <div>
+                <p>6. $nor: Consulta con Dos Expresiones · contener el
+                    campo precio cuyo valor <br> no es igual a 1.99 y
+                    contener el campo venta cuyo valor no es igual a
+                    verdadero.</p>
+                <p>Ejemplo: use genero</p>
+                <p>¿Cual es la no se que?</p>
+                <select name="opciones" id="ques_6">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">op1</option>
+                    <option value="2">op1</option>
+                    <option value="3">op1</option>
+                </select>
+                <p>------------------------------------------------------------------------------</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/luis.js"></script>
+</body>
+
+</html>
