@@ -44,16 +44,15 @@ p{
     width: 600px;
 }*/
 
-select{
+select, input{
     box-shadow: 0px 3px 0px green;
     text-decoration: none;
     border-radius: 5px;
-    height: 40px;
-    width: 15%;
+    width: 72%;
     border: 1px solid ;
     color: black;
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     background-color: rgb(154, 198, 114);
 }
