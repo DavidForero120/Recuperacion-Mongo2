@@ -3,7 +3,9 @@ const router = express.Router();
 const ope = require('child_process');
 
 const abrir = ()=> {
-      ope.spawn('cmd', ['/c', 'start C:\\mongosh-1.6.0-win32-x64\\bin\\mongosh'])
+      ope.spawn('cmd', ['/c', 'start C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.exe']);
+      ope.spawn('cmd', ['/c', 'start C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.exe']);
+      ope.spawn('cmd', ['/c', 'start C:\\mongosh-1.6.0-win32-x64\\bin\\mongosh']);
 }
 
 router.get('/', (req, res)=>{
