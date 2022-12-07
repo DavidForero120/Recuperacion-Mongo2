@@ -1,0 +1,159 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/edwar.css">
+    <title>Plan de mejoramiento MongoDB</title>
+</head>
+
+<body>
+
+    <section class="contenedor">
+        <!-- imagen mongodb -->
+        <div class="imagenmongo">
+            <img src="img/mongodb.png" alt="Logo mongodb">
+
+        </div>
+
+        <!-- texto -->
+        <div class="texto">
+            <h1>Cuestionario</h1>
+        </div>
+
+        <!-- contenido cuestionario -->
+        <div class="contenido">
+            <div class="q1">
+                <h1>Igual a ($eq)</h1>
+                <p>Este operador coincide con los valores que son iguales al valor dado.</p>
+                <h3>Ejemplo</h3>
+                <p>Si queremos recuperar un documento concreto de la colección de inventario que tenga el
+                    valor exacto de cantidad «20», introduciríamos el siguiente comando</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find( { qty: { <strong>$eq</strong>: 20 } } )</h4>
+                </div>
+                <h3>1). Recuperar los documentos sobre películas cuya fecha de estreno sea igual a 2000 </h3>
+
+                <select name="" id="p_1">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">db.media.find({"estreno": {$eq:2000}})</option>
+                    <!--Correcta-->
+                    <option value="2">db.media.find({"estreno"}: {$eq:2000})</option>
+                    <option value="3">db,media.find({"estreno"}: {$nin:2000})</option>
+                    <option value="4">db.media({"estreno"}: {$eq:2000})</option>
+                </select>
+            </div>
+            <div class="q1">
+                <h1>Mayor que ($gt)</h1>
+                <p>Este operador coincide si los valores son mayores que el valor dado.</p>
+                <h3>Ejemplo</h3>
+                <p>En este ejemplo, recuperamos los documentos en los que la cantidad es mayor que 15:</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find({"qty": { <strong>$gt</strong>: 15}})</h4>
+                </div>
+                <h3>2). Recuperar los documentos de la colección "ficha" en donde la cantidad de aprendices sea mayor a
+                    12</h3>
+
+                <select name="" id="p_2">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">db.fichas{"cant_apren": {$gt:12}}</option>
+                    <option value="2">db.fichas.find({"cant_apren": {$gt:12}})</option>
+                    <option value="3">fichas.find({"cant_apren": {$gt:12}})</option>
+                    <option value="4">db.ficha.find({"cant_apren": {$gt:12}})</option>
+                    <!--Correcta-->
+                </select>
+            </div>
+            <div class="q1">
+                <h1>Mayor o igual que ($gte)</h1>
+                <p>Este operador coincide cuando los valores son mayores o iguales que el valor dado.</p>
+                <h3>Ejemplo</h3>
+                <p>recuperamos los documentos cuya cantidad es mayor o igual a 25:</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find({"qty": { <strong>$gte</strong>: 25}})</h4>
+                </div>
+                <h3>3). Recuperar los documentos de la colección "nomina" donde la horas trabajadas son iguales o
+                    mayores a 48</h3>
+
+                <select name="" id="p_3">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">db.nomina.find({"horas_tra": {$gte: 48}})</option>
+                    <!--Correcta-->
+                    <option value="2">find({"horas_tra": {$gte: 48}})</option>
+                    <option value="3">db.nomina.find("horas_tra": {$gte: 48})</option>
+                    <option value="4">db.nomina.find({"horas_tra": $gte: 48})</option>
+                </select>
+            </div>
+            <div class="q1">
+                <h1>Menor que ($lt)</h1>
+                <p>Este operador coincide si los valores son menores que el valor proporcionado.</p>
+                <h3>Ejemplo</h3>
+                <p>Busquemos los documentos con una cantidad inferior a 25:</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find({"qty": { <strong>$lt</strong>: 25}})</h4>
+                </div>
+                <h3>4). Recuperar los documentos de la colección "jueguetes" en donde la produccion sea menor a 22000
+                </h3>
+
+                <select name="" id="p_4">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">find({"produccion": {$lt: 22000}})</option>
+                    <option value="2">db.jujuetes.find({"produccion": {$lt: 22000}})</option>
+                    <option value="3">db.juguetes.find({"produccion": {$lt: 22000}})</option>
+                    <!--Correcta-->
+                    <option value="4">db,juguetes.fin({"produccion": {$lt: 22000}})</option>
+                </select>
+            </div>
+            <div class="q1">
+                <h1>Menor o igual que ($lte)</h1>
+                <p>Este operador sólo coincide si los valores son menores o iguales que el valor dado.</p>
+                <h3>Ejemplo</h3>
+                <p>Busquemos los documentos con una cantidad menor o igual a 25.</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find({"qty": { <strong>$lte</strong>: 25}})</h4>
+                </div>
+                <h3>5). Recuperar los documentos de la colección "aprendiz" donde la edad sea menor o igual a 16</h3>
+
+                <select name="" id="p_5">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">db.aprendiz.find({"edad": {$lte: 16}})</option>
+                    <!--Correcta-->
+                    <option value="2">db.aprendis.find({"edad": {$lte: 16}})</option>
+                    <option value="3">Collection.aprendiz.find({"edad": {$lte: 16}})</option>
+                    <option value="4">db.aprendiz.find({"edad": {$lt: 16}})</option>
+                </select>
+            </div>
+            <div class="q1">
+                <h1>No es igual ($ne)</h1>
+                <p>El operador $ne devuelve los documentos en los que el valor especificado no es igual.</p>
+                <h3>Ejemplo</h3>
+                <p>Digamos que queremos seleccionar todos los documentos en los que la cantidad no es igual a 20:</p>
+                <div class="ejemplo">
+                    <h4>db.inventory.find( { qty: { <strong>$ne</strong>: 20 } } )</h4>
+                </div>
+                <h3>6). Recuperar los documentos de la colección "estadio" donde el nombre no sea igual a Al Thumama
+                </h3>
+
+                <select name="" id="p_6">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">db.estadio.find({"nombre": {$ne: "All Thumama"}})</option>
+                    <option value="2">db.estadiosfifa.find({"nombre": {$ne: "Al Thumama"}})</option>
+                    <option value="3">db.estadio.find({"nombre": {$ne: "Al Thumama"}})</option>
+                    <!--Correcta-->
+                    <option value="4">({"nombre": {$ne: "Al Thumama"}})</option>
+                </select>
+            </div>
+            <div id="seguir" class="seguir" >
+                  <div class="botones">
+                   <a href="/practic"><button class="button">Siguiente</button></a>        
+                  </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- scrip -->
+    <script src="js/edwar.js"></script>
+</body>
+
+</html>
