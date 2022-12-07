@@ -9,123 +9,14 @@ const validar = [
       pregunta7 = false
   ]
   
-  const question1 = document.getElementById('use_');
-  question1.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('use_').value
-      if(valor==1){
-          question1.classList.remove('incorrecto');
-          question1.classList.add('correcto');
-          validar['pregunta1'] = true;
-      }else{
-          question1.classList.remove('correcto');
-          question1.classList.add('incorrecto');
-          validar['pregunta1'] = false;
-      }
-  })
-  
-  
-  const question2 = document.getElementById('drop_1');
-  question2.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('drop_1').value;
-      if(valor == "use perros"){
-          question2.classList.remove('incorrecto');
-          question2.classList.add('correcto');
-          validar['pregunta2'] = true
-      }else{
-          question2.classList.remove('correcto');
-          question2.classList.add('incorrecto');
-          validar['pregunta2'] = false
-      }
-  })
-  
-  const question3 = document.getElementById('drop_2');
-  question3.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('drop_2').value;
-      if(valor == "db.dropDatabase()"){
-          question3.classList.remove('incorrecto');
-          question3.classList.add('correcto');
-          validar['pregunta2a'] = true
-      }else{
-          question3.classList.remove('correcto');
-          question3.classList.add('incorrecto');
-          validar['pregunta2a'] = false
-      }
-  })
-  
-  const question4 = document.getElementById('create_');
-  question4.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('create_').value
-      if(valor == 1){
-          question4.classList.remove('incorrecto');
-          question4.classList.add('correcto');
-          validar['pregunta3'] = true
-          console.log(validar)
-      }else{
-          question4.classList.remove('correcto');
-          question4.classList.add('incorrecto');
-          validar['pregunta3'] = false
-      }
-  })
-  
-  const question5 = document.getElementById('insert_');
-  question5.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('insert_').value;
-      if(valor== `db.alumnos.insert({nombre:"pedro"})` || valor == `db.alumnos.insert({ nombre: "pedro" })` || valor == `db.alumnos.insert( { nombre: "pedro" } )`){
-          question5.classList.remove('incorrecto');
-          question5.classList.add('correcto');
-          validar['pregunta4'] = true;
-      }else{
-          question5.classList.remove('correcto');
-          question5.classList.add('incorrecto');
-          validar['pregunta4'] = false;
-      }
-  })
-  
-  const question6 = document.getElementById('update_');
-  question6.addEventListener('mouseleave',()=>{
-      const valor = document.getElementById('update_').value;
-      if(valor== `db.profesores.update({_id:1},{$set:{nombre:"lucas"}})` || valor== `db.profesores.update( {_id:1} , {$set:{nombre:"lucas"} } )`|| valor== `db.profesores.update( {_id:1} , { $set:{nombre:"lucas"} } )` || valor== `db.profesores.update({ _id:1 },{ $set:{ nombre:"lucas" }})`){
-          question6.classList.remove('incorrecto');
-          question6.classList.add('correcto');
-          validar['pregunta5'] = true; 
-      }else{
-          question6.classList.remove('correcto');
-          question6.classList.add('incorrecto');
-          validar['pregunta5'] = false; 
-      }
-  })
-   
-  const question7 = document.getElementById('drop_3');
-  question7.addEventListener('mouseleave',()=> {
-      const valor = document.getElementById('drop_3').value;
-      if(valor == 4){
-          question7.classList.remove('incorrecto');
-          question7.classList.add('correcto');
-          validar['pregunta6'] = true; 
-      }else{
-          question7.classList.remove('correcto');
-          question7.classList.add('incorrecto');
-          validar['pregunta6'] = false; 
-      }
-  
-  });
-  
-  const question8 = document.getElementById('drop_4');
-  question8.addEventListener('mouseleave',()=> {
-      const valor = document.getElementById('drop_4').value;
-      if(valor == "db.dropDatabase()"){
-          question8.classList.remove('incorrecto');
-          question8.classList.add('correcto');
-          validar['pregunta7'] = true; 
-          console.log(validar)
-      }else{
-          question8.classList.remove('correcto');
-          question8.classList.add('incorrecto');
-          validar['pregunta7'] = false; 
-      }
-  
-  });
-
+    const question1 = document.getElementById('use_'); 
+    const question2 = document.getElementById('drop_1');
+    const question3 = document.getElementById('drop_2');
+    const question4 = document.getElementById('create_');
+    const question5 = document.getElementById('insert_');
+    const question6 = document.getElementById('update_');
+    const question7 = document.getElementById('drop_3');
+    const question8 = document.getElementById('drop_4');
 
   question1.addEventListener('blur',()=>{
       const valor = document.getElementById('use_').value
@@ -133,6 +24,13 @@ const validar = [
           question1.classList.remove('incorrecto');
           question1.classList.add('correcto');
           validar['pregunta1'] = true;
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
+
       }else{
           question1.classList.remove('correcto');
           question1.classList.add('incorrecto');
@@ -146,7 +44,13 @@ const validar = [
       if(valor == "use perros"){
           question2.classList.remove('incorrecto');
           question2.classList.add('correcto');
-          validar['pregunta2'] = true
+          validar['pregunta2'] = true;
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
       }else{
           question2.classList.remove('correcto');
           question2.classList.add('incorrecto');
@@ -160,7 +64,14 @@ const validar = [
       if(valor == "db.dropDatabase()"){
           question3.classList.remove('incorrecto');
           question3.classList.add('correcto');
-          validar['pregunta2a'] = true
+          validar['pregunta2a'] = true;
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
+
       }else{
           question3.classList.remove('correcto');
           question3.classList.add('incorrecto');
@@ -174,8 +85,16 @@ const validar = [
       if(valor == 1){
           question4.classList.remove('incorrecto');
           question4.classList.add('correcto');
-          validar['pregunta3'] = true
-          console.log(validar)
+          validar['pregunta3'] = true;
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
+            
+        
+
       }else{
           question4.classList.remove('correcto');
           question4.classList.add('incorrecto');
@@ -190,6 +109,13 @@ const validar = [
           question5.classList.remove('incorrecto');
           question5.classList.add('correcto');
           validar['pregunta4'] = true;
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
+
       }else{
           question5.classList.remove('correcto');
           question5.classList.add('incorrecto');
@@ -204,6 +130,13 @@ const validar = [
           question6.classList.remove('incorrecto');
           question6.classList.add('correcto');
           validar['pregunta5'] = true; 
+          if(validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        }
+
       }else{
           question6.classList.remove('correcto');
           question6.classList.add('incorrecto');
@@ -218,7 +151,14 @@ const validar = [
           question7.classList.remove('incorrecto');
           question7.classList.add('correcto');
           validar['pregunta6'] = true; 
-      }else{
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        }       
+        
+    } else{
           question7.classList.remove('correcto');
           question7.classList.add('incorrecto');
           validar['pregunta6'] = false; 
@@ -232,8 +172,13 @@ const validar = [
       if(valor == "db.dropDatabase()"){
           question8.classList.remove('incorrecto');
           question8.classList.add('correcto');
-          validar['pregunta7'] = true; 
-          console.log(validar)
+          validar['pregunta7'] = true;         
+          if (validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
+            seguir.classList.replace('seguir','seguirA')
+            
+        }else{
+            seguir.classList.replace('seguirA','seguir')
+        } 
       }else{
           question8.classList.remove('correcto');
           question8.classList.add('incorrecto');
@@ -242,7 +187,4 @@ const validar = [
   
   });
   
-  if(validar.pregunta1== true && validar.pregunta2== true && validar.pregunta2a== true && validar.pregunta3== true && validar.pregunta4== true && validar.pregunta5== true && validar.pregunta6== true && validar.pregunta7== true  ){
-      const seguir = document.getElementById('seguir');
-      seguir.style.display="flex"
-  }
+ 

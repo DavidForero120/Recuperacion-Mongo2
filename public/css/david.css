@@ -31,6 +31,7 @@ body{
       color: rgb(253, 253, 253);
       display: flex;
       align-items: center;
+      justify-content: flex-end;
   }
   
   a:hover{
@@ -195,9 +196,7 @@ body{
       }.inputs{ 
             margin-bottom: 2%;
       }
-      .comands div div {
-            margin-bottom: 3%;
-        }
+      
         select, input{
             height: 2.5em !important;
             width: 18em !important;
@@ -217,16 +216,16 @@ body{
       -webkit-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
       -moz-box-shadow: 0px 3px 15px 0px rgba(17,134,62,0.8) !important;
   }
-  .wrap {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-top: 2em;
-      margin-right: 2em;
-      margin-bottom: 4em;
-    }
-    
+  .seguir {
+    display: none !important;
+     }
+     .seguirA{
+         width: 100%;
+         display: flex !important;
+         align-items: center;
+         justify-content: flex-end;
+     }
+     
     .button {
       width: 160px;
       height: 45px;

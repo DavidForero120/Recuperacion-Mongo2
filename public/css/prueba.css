@@ -1,0 +1,98 @@
+body{
+      margin: 0;
+      background-color: rgba(173, 205, 171, 0.833);    
+}
+.content_{
+      width: 100%;
+}
+.title{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 3%;
+}
+.title h1{
+      font-size: 1.3em !important;  
+      text-align: center;
+}
+.reto{
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+}
+p{
+      color: green !important;
+      margin-block-end: 0.5em !important;
+      margin-block-start: 0.5em !important;
+}
+.hr{
+      border: 1px solid white;
+      width: 100%;
+}
+.consola{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+}
+a{
+      text-decoration: overline green;
+}
+.consola a{
+      margin-top: 3%;
+      margin-right: 3%;
+      color: green;
+      font-size: 1em !important;
+}
+.consola a:hover{
+      color: black;
+      text-decoration: overline white;
+      transition: 0.5s;
+}
+
+@media screen and (min-width: 560px) {
+      .reto {
+            padding: 50px;
+      }
+      .reto .title{
+            margin-top: -50px;
+      }
+      .title h3{
+            font-size: 1.5em !important;
+      }
+      .title h1 {
+             font-size: 1.6em !important;    
+      }
+}
+
+@media screen and (min-width: 800px) {
+      .title h1 {
+            font-size: 1.8em !important;    
+     }
+     .title h3{
+            font-size: 1.65em !important;
+      }
+      p{
+            font-size: 1.1em !important;
+      }
+}
+@media screen and (min-width: 1024px) {
+      .title{
+            margin-top: 1%;
+      }
+      .reto {
+            padding: 75px;
+            margin-top: -1%;
+      }     
+}
+
+@media screen and (min-width: 1400px) {
+      .reto {
+            padding-left: 125px;
+            padding-right: 125px;
+            margin-top: -3%;
+      }
+      .reto {
+            padding: 75px;
+            margin-top: 1%;
+      } 
+}

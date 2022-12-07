@@ -10,18 +10,20 @@
 
 <body>
     <div class="titulo">
-            <h1>Comandos de mongo</h1>
-        </div>
-    <div class="contenedor">    
+        <h1>Comandos de mongo</h1>
+    </div>
+    <div class="contenedor">
         <div class="contenido">
             <div>
-                <p>1. $in: El operador selecciona los documentos donde el <br>
-                    valor de un campo es igual a cualquier valor en la
-                    matriz especificada.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
+                <p>1. $in: El operador selecciona los documentos donde el valor de un campo <br> 
+                    es igual a cualquier valor en la matriz especificada.</p>
+                <p>Ejemplo: db.coleccion.find({campo:{$in:['valor1','valor2',...,'valorN']}});</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_1">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({campo:$in:{['valor1','valor2','valor3']}})</option>
+                    <option value="2">({campo:{$in:['valor1','valor2','valor3']}})</option>
+                    <option value="3">({$in: [{'valor1'}, {'valor2'} ]})</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
@@ -29,11 +31,11 @@
                 <p>2. $nin: El operador selecciona los documentos cuyo
                     campo contiene <br> una matriz sin elementos iguales
                     a un valor en la matriz especificada.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
-                </select>
+                <p>Ejemplo: db.libros.find( { editorial: { $nin : ['Planeta'] } })</p>
+                <p>Digite la sintaxis correcta que no contenga el nombre 'Pedro', <br>
+                 de la colección estudiantes.
+                </p>
+                <input type="text" id="ques_2">
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
@@ -42,36 +44,43 @@
                     y seleccionar o recuperar solo aquellos
                     documentos <br> que coincidan con al menos una de
                     las expresiones dadas en la matriz.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
+                <p>Ejemplo: ({ $or: [ { valor1 }, { valor2 }, { valor3 } ] })</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_3">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({campo:{$or:['precio:50','cantidad:1']}})</option>
+                    <option value="2">({$or: [{precio:50}},$or:{cantidad:1} ]})</option>
+                    <option value="3">({$or: [{precio:50}}, {cantidad:1} ]})</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
-            </div>
-            <div class="contenido">
+        </div>
+        <div class="contenido">
             <div>
-                <p>4. $and: Evalúa una o más expresiones y devuelve
-                    verdadero si todas las expresiones <br> son
-                    verdaderas o si se ejecutan sin expresiones de
-                    argumento. De lo contrario, $and devuelve falso.</p>
-                <p>Ejemplo: use genero</p>
-                <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
+                <p>4. $and: Es una matriz de dos o más expresiones. Selecciona los documentos <br> 
+                    en los que se cumplen todas las condiciones de las expresiones.</p>
+                <p>Ejemplo: ({ $and: [ { valor1 }, { valor2 }, { valor3 } ] })</p>
+                <p>Seleccione la sintaxis correcta</p>
+                <select name="opciones" id="ques_4">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">({$and: [{pais:colombia}}, {ciudad:cartagena} ]})</option>
+                    <option value="2">({$and: [{pais:colombia},$and:{ciudad:cartagena} ]})</option>
+                    <option value="3">({campo:{$and:['pais:colombia','ciudad:cartagena']}})</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
             <div>
-                <p>5. $not: Realiza una operación NOT lógica en la 
+                <p>5. $not: Realiza una operación NOT lógica en la
                     ◃expresión-operador▹ especificada <br> y selecciona
                     los documentos que no coinciden con la
                     ◃expresión-operador▹.</p>
-                <p>Ejemplo: use genero</p>
+                <p>Ejemplo: { field: { $not: { operator-expression } } }</p>
                 <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
+                <select name="opciones" id="ques_5">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">op1</option>
+                    <option value="3">op1</option>
+                    <option value="4">op1</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
@@ -82,13 +91,22 @@
                     verdadero.</p>
                 <p>Ejemplo: use genero</p>
                 <p>¿Cual es la no se que?</p>
-                <select name="opciones" id="">
-                    <option value="">op1</option>
+                <select name="opciones" id="ques_6">
+                    <option value="0">Seleccione la opcion que crea correcta</option>
+                    <option value="1">op1</option>
+                    <option value="2">op1</option>
+                    <option value="3">op1</option>
                 </select>
                 <p>------------------------------------------------------------------------------</p>
             </div>
+            <div id="seguir" class="seguir" >
+                <div class="botones">
+                 <a href="/practic2"><button class="button">Siguiente</button></a>        
+                </div>
+          </div>
         </div>
     </div>
+    <script src="js/luis.js"></script>
 </body>
 
 </html>
